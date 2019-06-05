@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3qG/gwmUSkCyGJnIJnwxVgAAAAACAAAAAAAQZgAAAAEAACAAAADEzZ9y/yzczvLK6wN6h06GsLpUjWkvey13e6PI0KG1+AAAAAAOgAAAAAIAACAAAADx5ShbI3Qy9icQ0Cd4uuk+N+Ml0g5CC5R0hg8NUzCi2yAAAABjSoO/ZUaVGO4O8nGKoVhGbVY7rNZzIfNLVLErPtXs30AAAABVJBS7AhyczEj4QRymLDRE2zr8KSEWsuwg+EqOBAhgOJ6hj+u8JsZ0OTqmfbiwoW8Tu2LlGb4B6hvBkJPXSENE</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AxiomaDb">
+      <Value>mongodb+srv://jair:jair%40cluster0-r70cj.azure.mongodb.net/test%3fretryWrites=true&amp;w=majority</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

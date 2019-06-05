@@ -1,0 +1,17 @@
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\hostpolicy.dll
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\hostfxr.dll
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.exe
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.deps.json
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.runtimeconfig.json
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.runtimeconfig.dev.json
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.dll
+C:\Users\Jair\source\repos\Axioma\Axioma\bin\Debug\netcoreapp2.1\win-x86\Axioma.pdb
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.RazorAssemblyInfo.cache
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.RazorAssemblyInfo.cs
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.AssemblyInfoInputs.cache
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.AssemblyInfo.cs
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.RazorTargetAssemblyInfo.cache
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.dll
+C:\Users\Jair\source\repos\Axioma\Axioma\obj\Debug\netcoreapp2.1\win-x86\Axioma.pdb
