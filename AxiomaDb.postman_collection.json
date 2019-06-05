@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "17bad7fb-531c-41c7-9fbf-c82283695b46",
+		"name": "AxiomaDb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autentificacion",
+			"item": [
+				{
+					"name": "signupstudent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"jair@enriquez\",\n\t\"password\" : \"jair@enriquez\",\n\t\"email\" : \"jair.enriquez@outlook.com\",\n\t\"firstname\": \"jair\",\n\t\"surname\" : \"enriquez\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/signupstudent",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"signupstudent"
+							]
+						},
+						"description": "registro de usuario\n"
+					},
+					"response": []
+				},
+				{
+					"name": "loginstudent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"jair@enriquez\",\n\t\"password\" : \"jair@enriquez\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/loginstudent",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"loginstudent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "student/university",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "modifica la universidad de un estudiante"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6414401b-77f7-44be-b073-cf0d930c6d9a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "55aa83b5-f9b6-4fac-85a7-3982bc0c5a79",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "University",
+			"item": [
+				{
+					"name": "university/image/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2YxZDBjMjgxN2I5YzI2YTgxYzNmNTYiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTQzNDk2MSwiZXhwIjoxNTU5NDM1NTYxLCJpYXQiOjE1NTk0MzQ5NjF9.O-Rg4-LDW5MneRGYP4nh46wly5kiL-IBH5UlX1Pp-Zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/D:/Downloads/utpLogo.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/university/image",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"university",
+								"image"
+							]
+						},
+						"description": "subir una imagen a una universidad\nadjuntar solo imagenes png\nid:\nid de la universidad"
+					},
+					"response": []
+				},
+				{
+					"name": "university",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2YxZDBjMjgxN2I5YzI2YTgxYzNmNTYiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTQzNDk2MSwiZXhwIjoxNTU5NDM1NTYxLCJpYXQiOjE1NTk0MzQ5NjF9.O-Rg4-LDW5MneRGYP4nh46wly5kiL-IBH5UlX1Pp-Zw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Universidad Tecnologica del Peru\",\n\t\"courses\": [\"Algoritmos\", \"Matematica\", \"Quimica\"]\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/university",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"university"
+							]
+						},
+						"description": "crear una universidad"
+					},
+					"response": []
+				},
+				{
+					"name": "university",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "obtener las universidades"
+					},
+					"response": []
+				},
+				{
+					"name": "university/image/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44372/api/university/image/5cf48ee7f548a114ec9dd993",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"university",
+								"image",
+								"5cf48ee7f548a114ec9dd993"
+							]
+						},
+						"description": "obtener una imagen de una universidad\nid:\nel id de la universidad"
+					},
+					"response": []
+				},
+				{
+					"name": "university/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "obtener todos los cursos de la universidad del usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "courses/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "obtener un curso por su id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "courses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"matematica\",\n\t\"university\" : \"5cf5cf9b7948983f00f08152\"\n}"
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "crear un curso"
+					},
+					"response": []
+				},
+				{
+					"name": "courses/image/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "obtener la imagen de un curso"
+					},
+					"response": []
+				},
+				{
+					"name": "courses/image/{id}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "subir la imagen a un curso"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscriptions",
+			"item": [
+				{
+					"name": "subscriptions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTY4NzU0OCwiZXhwIjoxNTU5NjkxMTQ4LCJpYXQiOjE1NTk2ODc1NDh9.Mns_fYQo3oPxmJvvXo8elvGmSBqT1dqpaI964kdzHmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						},
+						"description": "muestra las subscripciones del usuario\n"
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTYyNzA2NSwiZXhwIjoxNTU5NjMwNjY1LCJpYXQiOjE1NTk2MjcwNjV9.R39Qz-nR0iYTvzXLQODj3v-vMhL8RXsTEiU3yU3bY7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course\" : \"5cf5d2ee860ea22080c9954d\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						},
+						"description": "agrega una subscripcion a un usuario\nid:\nid del curso"
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptions/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTY4NzU0OCwiZXhwIjoxNTU5NjkxMTQ4LCJpYXQiOjE1NTk2ODc1NDh9.Mns_fYQo3oPxmJvvXo8elvGmSBqT1dqpaI964kdzHmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								""
+							]
+						},
+						"description": "borra la subscripcion"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "487042df-5b94-40fa-bf79-dce485033529",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5f44670-43a7-46e2-8ee1-11708af8a2b2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Modules",
+			"item": [
+				{
+					"name": "modules/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modules/{idcourse}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modules",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"teoria de conjuntos\",\n\t\"course\" : \"5cf60b0ec160641514349c3c\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/modules",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"modules"
+							]
+						},
+						"description": "crea un modulo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lessons",
+			"item": [
+				{
+					"name": "lessons/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/lessons/5cf6bb47a7f34535c8c1ef7e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"lessons",
+								"5cf6bb47a7f34535c8c1ef7e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lessons/{idmodule}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lessons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Introduccion\",\n\t\"module\": \"5cf6bb47a7f34535c8c1ef7e\",\n\t\"video\" : \"vcIFjYYMFzg\"\n\t\"text\" : \"La teoría de conjuntos es una rama de la lógica matemática que estudia las propiedades y relaciones de los conjuntos: colecciones abstractas de objetos, consideradas como objetos en sí mismas. Los conjuntos y sus operaciones más elementales son una herramienta básica en la formulación de cualquier teoría matemática\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/modules",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"modules"
+							]
+						},
+						"description": "crea una clase"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
