@@ -22,6 +22,7 @@ namespace Axioma.Controllers
       }
 
       [HttpPost]
+	  [Authorize(Roles = "Student")]
       [Route("~/api/student/university")]
       public ActionResult UpdateUniversity(Student student){
           string userId = this.User.Claims.FirstOrDefault(i => i.Type == "userid").Value;

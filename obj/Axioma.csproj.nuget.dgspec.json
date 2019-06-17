@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jair\\source\\repos\\Axioma\\axioma\\Axioma.csproj": {}
+    "C:\\Users\\Jair\\Desktop\\axioma\\Axioma.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jair\\source\\repos\\Axioma\\axioma\\Axioma.csproj": {
+    "C:\\Users\\Jair\\Desktop\\axioma\\Axioma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jair\\source\\repos\\Axioma\\axioma\\Axioma.csproj",
+        "projectUniqueName": "C:\\Users\\Jair\\Desktop\\axioma\\Axioma.csproj",
         "projectName": "Axioma",
-        "projectPath": "C:\\Users\\Jair\\source\\repos\\Axioma\\axioma\\Axioma.csproj",
+        "projectPath": "C:\\Users\\Jair\\Desktop\\axioma\\Axioma.csproj",
         "packagesPath": "C:\\Users\\Jair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jair\\source\\repos\\Axioma\\axioma\\obj\\",
+        "outputPath": "C:\\Users\\Jair\\Desktop\\axioma\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

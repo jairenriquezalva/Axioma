@@ -25,12 +25,13 @@
 							"raw": "{\n\t\"username\" : \"jair@enriquez\",\n\t\"password\" : \"jair@enriquez\",\n\t\"email\" : \"jair.enriquez@outlook.com\",\n\t\"firstname\": \"jair\",\n\t\"surname\" : \"enriquez\"\n}"
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/signupstudent",
+							"raw": "https://axioma2019.azurewebsites.net/api/signupstudent",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5001",
 							"path": [
 								"api",
 								"signupstudent"
@@ -57,12 +58,13 @@
 							"raw": "{\n\t\"username\" : \"jair@enriquez\",\n\t\"password\" : \"jair@enriquez\"\n}"
 						},
 						"url": {
-							"raw": "https://localhost:44372/api/loginstudent",
+							"raw": "https://axioma2019.azurewebsites.net/api/loginstudent",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "44372",
 							"path": [
 								"api",
 								"loginstudent"
@@ -79,10 +81,42 @@
 				{
 					"name": "student/university",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU2MDgwMjMyNywiZXhwIjoxNTYwODA1OTI3LCJpYXQiOjE1NjA4MDIzMjd9.E--ba4HfY29g8hawKtsNpwEs1WYb4EYkqdwnl-VQoFI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"university\": \"5cf5cf9b7948983f00f08152\"\n}"
+						},
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/student/university",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"student",
+								"university"
+							]
 						},
 						"description": "modifica la universidad de un estudiante"
 					},
@@ -141,16 +175,18 @@
 							]
 						},
 						"url": {
-							"raw": "https://localhost:44372/api/university/image",
+							"raw": "https://axioma2019.azurewebsites.net/api/university/image/5cf604503d95d11528bfe6af",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "44372",
 							"path": [
 								"api",
 								"university",
-								"image"
+								"image",
+								"5cf604503d95d11528bfe6af"
 							]
 						},
 						"description": "subir una imagen a una universidad\nadjuntar solo imagenes png\nid:\nid de la universidad"
@@ -175,21 +211,22 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"Universidad Tecnologica del Peru\",\n\t\"courses\": [\"Algoritmos\", \"Matematica\", \"Quimica\"]\n}"
+							"raw": "{\n\t\"name\" : \"UPC\"\n}"
 						},
 						"url": {
-							"raw": "https://localhost:44372/api/university",
+							"raw": "https://axioma2019.azurewebsites.net/api/university",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "44372",
 							"path": [
 								"api",
 								"university"
@@ -202,10 +239,30 @@
 				{
 					"name": "university",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2YxZDBjMjgxN2I5YzI2YTgxYzNmNTYiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTQzNDk2MSwiZXhwIjoxNTU5NDM1NTYxLCJpYXQiOjE1NTk0MzQ5NjF9.O-Rg4-LDW5MneRGYP4nh46wly5kiL-IBH5UlX1Pp-Zw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/university",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"university"
+							]
 						},
 						"description": "obtener las universidades"
 					},
@@ -217,17 +274,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44372/api/university/image/5cf48ee7f548a114ec9dd993",
+							"raw": "https://axioma2019.azurewebsites.net/api/university/image/5cf604503d95d11528bfe6af",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "44372",
 							"path": [
 								"api",
 								"university",
 								"image",
-								"5cf48ee7f548a114ec9dd993"
+								"5cf604503d95d11528bfe6af"
 							]
 						},
 						"description": "obtener una imagen de una universidad\nid:\nel id de la universidad"
@@ -240,7 +298,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/university/5cf604503d95d11528bfe6af",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"university",
+								"5cf604503d95d11528bfe6af"
+							]
 						}
 					},
 					"response": []
@@ -253,10 +322,30 @@
 				{
 					"name": "courses",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU2MDgwMjMyNywiZXhwIjoxNTYwODA1OTI3LCJpYXQiOjE1NjA4MDIzMjd9.E--ba4HfY29g8hawKtsNpwEs1WYb4EYkqdwnl-VQoFI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/courses",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
 						},
 						"description": "obtener todos los cursos de la universidad del usuario"
 					},
@@ -268,7 +357,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/courses/5cf5d2ee860ea22080c9954d",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"courses",
+								"5cf5d2ee860ea22080c9954d"
+							]
 						},
 						"description": "obtener un curso por su id\n"
 					},
@@ -288,10 +388,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"matematica\",\n\t\"university\" : \"5cf5cf9b7948983f00f08152\"\n}"
+							"raw": "{\n\t\"name\" : \"fisica\",\n\t\"university\" : \"5cf5cf9b7948983f00f08152\"\n}"
 						},
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/courses",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
 						},
 						"description": "crear un curso"
 					},
@@ -303,7 +413,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/courses/image/5cf5d2ee860ea22080c9954d",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"courses",
+								"image",
+								"5cf5d2ee860ea22080c9954d"
+							]
 						},
 						"description": "obtener la imagen de un curso"
 					},
@@ -314,8 +436,30 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/D:/Downloads/Matemática_médica.png"
+								}
+							]
+						},
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/courses/image/5cf5d2ee860ea22080c9954d",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"courses",
+								"image",
+								"5cf5d2ee860ea22080c9954d"
+							]
 						},
 						"description": "subir la imagen a un curso"
 					},
@@ -334,7 +478,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTY4NzU0OCwiZXhwIjoxNTU5NjkxMTQ4LCJpYXQiOjE1NTk2ODc1NDh9.Mns_fYQo3oPxmJvvXo8elvGmSBqT1dqpaI964kdzHmA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU2MDgwNTc1NCwiZXhwIjoxNTYwODA5MzU0LCJpYXQiOjE1NjA4MDU3NTR9.vr4wR3snpL1NKtwZJCj_1AN-bCcCIoNLZX55zJHNEl4",
 									"type": "string"
 								}
 							]
@@ -342,12 +486,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/subscriptions",
-							"protocol": "http",
+							"raw": "https://axioma2019.azurewebsites.net/api/subscriptions",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"subscriptions"
@@ -365,7 +510,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU1OTYyNzA2NSwiZXhwIjoxNTU5NjMwNjY1LCJpYXQiOjE1NTk2MjcwNjV9.R39Qz-nR0iYTvzXLQODj3v-vMhL8RXsTEiU3yU3bY7E",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI1Y2Y1NTRkYTI2YmUwYTNhNTQyNTM3MWEiLCJyb2xlIjoiU3R1ZGVudCIsIm5iZiI6MTU2MDgwNTc1NCwiZXhwIjoxNTYwODA5MzU0LCJpYXQiOjE1NjA4MDU3NTR9.vr4wR3snpL1NKtwZJCj_1AN-bCcCIoNLZX55zJHNEl4",
 									"type": "string"
 								}
 							]
@@ -384,12 +529,13 @@
 							"raw": "{\n\t\"course\" : \"5cf5d2ee860ea22080c9954d\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/subscriptions",
-							"protocol": "http",
+							"raw": "https://axioma2019.azurewebsites.net/api/subscriptions",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"subscriptions"
@@ -415,16 +561,17 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/subscriptions/",
-							"protocol": "http",
+							"raw": "https://axioma2019.azurewebsites.net/api/subscriptions/5d08019110624a18085b67f7",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"subscriptions",
-								""
+								"5d08019110624a18085b67f7"
 							]
 						},
 						"description": "borra la subscripcion"
@@ -459,23 +606,23 @@
 			"name": "Modules",
 			"item": [
 				{
-					"name": "modules/{id}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": ""
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "modules/{idcourse}",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/modules/5cf5d2ee860ea22080c9954d",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"modules",
+								"5cf5d2ee860ea22080c9954d"
+							]
 						}
 					},
 					"response": []
@@ -494,15 +641,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"teoria de conjuntos\",\n\t\"course\" : \"5cf60b0ec160641514349c3c\"\n}"
+							"raw": "{\n\t\"name\" : \"teoria de conjuntos\",\n\t\"course\" : \"5cf5d2ee860ea22080c9954d\"\n}"
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/modules",
+							"raw": "https://axioma2019.azurewebsites.net/api/modules",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5001",
 							"path": [
 								"api",
 								"modules"
@@ -518,33 +666,23 @@
 			"name": "Lessons",
 			"item": [
 				{
-					"name": "lessons/{id}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://localhost:5001/api/lessons/5cf6bb47a7f34535c8c1ef7e",
-							"protocol": "https",
-							"host": [
-								"localhost"
-							],
-							"port": "5001",
-							"path": [
-								"api",
-								"lessons",
-								"5cf6bb47a7f34535c8c1ef7e"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "lessons/{idmodule}",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "https://axioma2019.azurewebsites.net/api/lessons/5d08027910624a18085b67f9",
+							"protocol": "https",
+							"host": [
+								"axioma2019",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"lessons",
+								"5d08027910624a18085b67f9"
+							]
 						}
 					},
 					"response": []
@@ -563,18 +701,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"Introduccion\",\n\t\"module\": \"5cf6bb47a7f34535c8c1ef7e\",\n\t\"video\" : \"vcIFjYYMFzg\"\n\t\"text\" : \"La teoría de conjuntos es una rama de la lógica matemática que estudia las propiedades y relaciones de los conjuntos: colecciones abstractas de objetos, consideradas como objetos en sí mismas. Los conjuntos y sus operaciones más elementales son una herramienta básica en la formulación de cualquier teoría matemática\"\n}"
+							"raw": "{\n\t\"name\" : \"Introduccion\",\n\t\"module\": \"5d08027910624a18085b67f9\",\n\t\"video\" : \"vcIFjYYMFzg\",\n\t\"text\" : \"La teoría de conjuntos es una rama de la lógica matemática que estudia las propiedades y relaciones de los conjuntos: colecciones abstractas de objetos, consideradas como objetos en sí mismas. Los conjuntos y sus operaciones más elementales son una herramienta básica en la formulación de cualquier teoría matemática\"\n}"
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/modules",
+							"raw": "https://axioma2019.azurewebsites.net/api/lessons",
 							"protocol": "https",
 							"host": [
-								"localhost"
+								"axioma2019",
+								"azurewebsites",
+								"net"
 							],
-							"port": "5001",
 							"path": [
 								"api",
-								"modules"
+								"lessons"
 							]
 						},
 						"description": "crea una clase"
